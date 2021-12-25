@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
+import { HeroFormComponent } from './hero-form/hero-form.component';
 
 import { FormsModule } from '@angular/forms';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
@@ -16,6 +18,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +26,8 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    HeroFormComponent
   ],
   imports: [
     HttpClientModule,
@@ -37,6 +41,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     ),
     BrowserModule,
     AppRoutingModule,
+    CommonModule,
     FormsModule
   ],
   providers: [],
